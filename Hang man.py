@@ -39,7 +39,32 @@ def play_game():
             else:
                 print('No idea why we get this message, should be investigated further!')
 
+        #2 - user inputs the full word
+        elif len(guess) == len(word):
+            if guess == word:
+                print('Well done, you have guessed the word!')
+            else:
+                print('Sorry, that was not the word we were looking for :(')
+                tries -= 1
 
+#3 - user inputs letters where the total number of letters =/= total number of letters in the word.
+        else:
+            print('The length of your guess is not the same as the length of the word we\'re looking for.')
+
+        status = ''
+        if guessed == False:
+            for letter in word:
+                if letter in letters_guessed:
+                    status += letter
+                else:
+                    status += '*'
+            print(status)
+
+        if status == word:
+            print('Well done, you have guessed the word!')
+            guessed = True
+        elif tries == 0:
+            print('You have run out of guesses and you haven\'t guessed the word.')
 
     play_again()
 
