@@ -39,7 +39,7 @@ def play_game():
             else:
                 print('No idea why we get this message, should be investigated further!')
                 
-     #hi
+     
 
         #2 - user inputs the full word
         elif len(guess) == len(word):
