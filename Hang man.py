@@ -43,6 +43,7 @@ def play_game():
         elif len(guess) == len(word):
             if guess == word:
                 print('Well done, you have guessed the word!')
+                guessed = True
             else:
                 print('Sorry, that was not the word we were looking for :(')
                 tries -= 1
